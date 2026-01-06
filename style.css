@@ -1,0 +1,163 @@
+.center-text {
+    height: 100vh;              /* Full screen height */
+    display: flex;
+    justify-content: center;    /* Horizontal center */
+    align-items: center;        /* Vertical center */
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: #111;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    background: #f4f4f4;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 1rem 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+/* Sections */
+.section {
+    padding: 3rem 0;
+}
+
+.section h2 {
+    margin-bottom: 1rem;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.bolditalic {
+    font-weight: bold;
+    font-style: italic;
+}
+webpages {
+    scroll-behavior: smooth;
+}
+about{
+    scroll-behavior: smooth;
+}
+contact{
+    scroll-behavior: smooth;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    width: 35px;
+    height: 35px;
+
+    background: #111;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    transition: background 0.3s;
+}
+
+.back-to-top:hover {
+    background: #444;
+}
