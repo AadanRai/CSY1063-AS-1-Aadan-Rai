@@ -3,11 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .centertext {
-    height: 100vh;              
+    height: 100vh;
     display: flex;
-    justify-content: center;    
-    align-items: center;        
+    justify-content: center;
+    align-items: center;
 }
 
 /* website style */
@@ -45,6 +46,7 @@ header .container {
 .navlinks {
     list-style: none;
     display: flex;
+    gap: 20px;
 }
 
 .navlinks li {
@@ -54,10 +56,71 @@ header .container {
 .navlinks a {
     color: #fff;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .navlinks a:hover {
     text-decoration: underline;
+}
+
+#navtoggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1000;
+}
+
+@media (max-width: 768px),
+(aspect-ratio < 1/1) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* hide normal nav */
+
+    .navlinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .navlinks li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #333;
+    }
+
+    #navtoggle:checked~.navlinks {
+        display: flex;
+    }
 }
 
 /* hero */
@@ -91,7 +154,7 @@ header .container {
 
 /* sections */
 
-.section {
+section {
     padding: 3rem 0;
 }
 
@@ -112,6 +175,7 @@ header .container {
     border: 1px solid #ddd;
     border-radius: 5px;
     background: #fafafa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* footer */
@@ -123,12 +187,13 @@ footer {
     padding: 1rem 0;
     margin-top: 2rem;
 }
+
 .bolditalic {
     font-weight: bold;
     font-style: italic;
 }
 
-scrollbehaviorsmooth{
+scrollbehaviorsmooth {
     scroll-behavior: smooth;
 }
 
@@ -195,7 +260,7 @@ scrollbehaviorsmooth{
 
 .cardlink .projectcard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* projects page grid (diff layout) */
@@ -211,7 +276,7 @@ scrollbehaviorsmooth{
     background: #fafafa;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .projectitem img {
@@ -260,6 +325,7 @@ scrollbehaviorsmooth{
     border-radius: 5px;
     font-family: inherit;
 }
+
 .contactform textarea {
     padding: 10px;
     border: 1px solid #ccc;
@@ -267,7 +333,7 @@ scrollbehaviorsmooth{
     font-family: inherit;
 }
 
-.contactform input:focus{
+.contactform input:focus {
     outline: none;
     border-color: #111;
 }
@@ -302,50 +368,33 @@ scrollbehaviorsmooth{
     color: #555;
 }
 
-.hamburger {
-  width: 30px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
+/* video page */
+.videocontainer {
+    text-align: center;
 }
 
-.hamburger span {
-  height: 3px;
-  width: 100%;
-  background: #fff;
-  border-radius: 2px;
-  transition: 0.3s ease;
+.videowrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    aspect-ratio: 16 / 9;
+}
+
+.videowrapper video {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.videodescription {
+    max-width: 800px;
+    margin: auto;
+    font-size: 0.95rem;
+    color: #555;
 }
 
 /* responsiveness */
-
-@media (max-width: 768px), (aspect-ratio < 1/1) {
-  /*show hamburger */
-  .hamburger {
-    display: flex;
-  }
-
-  /* hide normal nav */
-  .navlinks {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #111;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    display: none;
-  }
-
-  /* toggle nav */
-  #navtoggle:checked ~ .navlinks {
-    display: flex;
-  }
-}
 
 @media (max-width: 768px) {
     .contactcontainer {
@@ -364,10 +413,11 @@ scrollbehaviorsmooth{
         grid-template-columns: 1fr;
     }
 
-    .projectitem.wide{
+    .projectitem.wide {
         grid-column: span 1;
         grid-row: span 1;
     }
+
     .projectitem.tall {
         grid-column: span 1;
         grid-row: span 1;
