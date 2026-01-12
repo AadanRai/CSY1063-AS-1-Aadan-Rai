@@ -1,15 +1,15 @@
-.center-text {
-    height: 100vh;              /* Full screen height */
-    display: flex;
-    justify-content: center;    /* Horizontal center */
-    align-items: center;        /* Vertical center */
-}
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+.center-text {
+    height: 100vh;              
+    display: flex;
+    justify-content: center;    
+    align-items: center;        
+}
+/* Reset */
 
 /* General Styles */
 body {
