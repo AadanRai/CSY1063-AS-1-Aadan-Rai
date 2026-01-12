@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Portfolio</title>
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
+<!-- body -->
+
 <body>
-<a href="#top" class="back-to-top">↑</a>
 
-<!-- Put this at the very top of your page -->
-<div id="top"></div>
-
-    <!-- Header / Navbar -->
     <header>
         <div class="container">
             <h1 class="logo">Aadan Rai</h1>
             <nav>
-                <ul class="nav-links">
+
+                <input type="checkbox" id="navtoggle">
+                <ul class="navlinks">
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Pages</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -30,7 +27,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- hero -->
     <section class="hero">
         <div class="container">
             <h2>Hi👋, This is the portfolio website for Aadan's CSY 1063 : AS - 1 </h2>
@@ -39,8 +36,8 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
+    <!-- about -->
+    <section id="scrollbehaviorsmooth" class="section">
         <div class="container">
             <h2>About my website</h2>
             <p>
@@ -51,42 +48,46 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
+    <!-- webpages -->
+    <section id="scrollbehaviorsmooth" class="section">
         <div class="container">
-            <h2 id="webpages">Webpages</h2>
+            <h2 id="scrollbehaviorsmooth">Webpages</h2>
 
-            <div class="projects-grid">
-                <div class="project-card">
+            <div class="webpagesgrid">
+                <div class="webpagecard">
                     <h3>index.html</h3>
-                    <p>This is the page that you are currently looking at.</p>
+                    <p>This is the page that you are currently looking on.</p>
                 </div>
-
-                <div class="project-card">
-                    <h3>project.html</h3>
-                    <p>Short description of your project.</p>
-                </div>
-
-                <div class="project-card">
+                <a href="project.html" class="cardlink">
+                    <div class="webpagecard">
+                        <h3>project.html</h3>
+                <p>A page meant to hold future projects.</p>
+            </div>
+            </a>
+            <a href="contact.html" class="cardlink">
+                <div class="webpagecard">
                     <h3>contact.html</h3>
-                    <p>Short description of your project.</p>
-                </div>
-                <div class="project-card">
-                    <h3>videoDemo.html</h3>
-                    <p>Short description of your project.</p>
-                </div>
-                <a href="sitereport.html" class="card-link">
-                <div class="project-card">
-                    <h3>sitereport.html</h3>
-                    <p>Short description of your project.</p>
+                    <p>Page to find how to contact Me.</p>
                 </div>
             </a>
-            </div>
+            <a href="videoDemo.html" class="cardlink">
+                <div class="webpagecard">
+                    <h3>videoDemo.html</h3>
+                    <p>A page with a video demonstration of a look around and working of my website.</p>
+                </div>
+            </a>
+            <a href="sitereport.html" class="cardlink">
+                <div class="webpagecard">
+                    <h3>sitereport.html</h3>
+                    <p>A site report page with all of the learnings that I have gained throughout this module.</p>
+                </div>
+            </a>
+        </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="scrollbehaviorsmooth" class="section">
         <div class="container">
             <h2>Contact me : </h2>
             <p>Email: aadanrai.u@email.com</p>
